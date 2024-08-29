@@ -7,7 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="32dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,8 +15,10 @@
         android:layout_height="wrap_content"
         android:text="@string/pt_name"
         android:textStyle="bold"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textColor="@color/black_two"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
       />
     <ImageView
         android:id="@+id/icon_location"
@@ -25,27 +26,18 @@
         android:layout_height="22dp"
         android:src="@drawable/icon_location"
         android:layout_below="@+id/txt_pt_name"
+        android:layout_alignStart="@id/txt_pt_name"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pt_location"
-        android:textSize="17sp"
+        android:textSize="15sp"
         android:layout_below="@+id/txt_pt_name"
         android:layout_toRightOf="@id/icon_location"
         android:layout_alignTop="@id/icon_location"
         android:layout_marginLeft="8dp"
         android:textColor="@color/black_two"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pt_location"
-        android:textSize="17sp"
-        android:layout_below="@+id/txt_pt_name"
-        android:layout_toRightOf="@id/icon_location"
-        android:layout_alignTop="@id/icon_location"
-        android:layout_marginLeft="8dp"
         />
     <RelativeLayout
         android:id="@+id/header_box"
@@ -54,14 +46,16 @@
         android:layout_below="@id/icon_location"
         android:background="@drawable/header_background"
         android:paddingVertical="12dp"
+        android:layout_alignStart="@id/icon_location"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp">
         <TextView
             android:id="@+id/txt_informasi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Informasi perubahan data katalog"
-            android:textSize="15sp"
+            android:textSize="13sp"
             android:textColor="@color/grey"
             android:layout_centerHorizontal="true"
             />
@@ -76,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pembaruan terakhir: "
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textColor="@color/grey"
                 />
             <TextView
@@ -84,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/txt_pembaruan_start"
                 android:text="@string/date_start"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textColor="@color/orange_tua"
                 android:textStyle="bold"
                 />
@@ -100,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pembaruan selanjutnya: "
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textColor="@color/grey"
                 />
             <TextView
@@ -108,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/txt_pembaruan_end"
                 android:text="@string/date_end"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textColor="@color/orange_tua"
                 android:textStyle="bold"
                 />
@@ -117,8 +111,9 @@
     <RelativeLayout
         android:id="@+id/box_katalog"
         android:layout_below="@id/header_box"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_alignStart="@id/header_box"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:padding="20dp"
@@ -126,7 +121,7 @@
         <ImageView
             android:id="@+id/icon_katalog"
             android:layout_width="80dp"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/icon_katalog"
             android:layout_centerHorizontal="true"
             />
@@ -136,7 +131,7 @@
             android:text="@string/txt_katalog"
             android:layout_below="@id/icon_katalog"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             />
@@ -145,8 +140,8 @@
         android:id="@+id/box_tender"
         android:layout_below="@id/header_box"
         android:layout_alignEnd="@id/header_box"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:padding="20dp"
@@ -154,7 +149,7 @@
         <ImageView
             android:id="@+id/icon_tender"
             android:layout_width="60dp"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/icon_tender"
             android:layout_centerHorizontal="true"
             />
@@ -164,7 +159,7 @@
             android:text="@string/txt_tender"
             android:layout_below="@id/icon_tender"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             />
@@ -172,8 +167,9 @@
     <RelativeLayout
         android:id="@+id/box_laporan"
         android:layout_below="@id/box_katalog"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_alignStart="@id/box_katalog"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:padding="20dp"
@@ -182,7 +178,7 @@
         <ImageView
             android:id="@+id/icon_laporan"
             android:layout_width="60dp"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/icon_laporan"
             android:layout_centerHorizontal="true"
             />
@@ -192,7 +188,7 @@
             android:text="@string/txt_laporan"
             android:layout_below="@id/icon_laporan"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             />
@@ -201,8 +197,8 @@
         android:id="@+id/box_pengaturan"
         android:layout_below="@id/box_tender"
         android:layout_alignEnd="@id/header_box"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
         android:background="@drawable/box"
         android:elevation="10dp"
         android:padding="20dp"
@@ -211,7 +207,7 @@
         <ImageView
             android:id="@+id/icon_pengaturan"
             android:layout_width="60dp"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
             android:src="@drawable/icon_pengaturan"
             android:layout_centerHorizontal="true"
             />
@@ -221,7 +217,7 @@
             android:text="@string/txt_pengaturan"
             android:layout_below="@id/icon_pengaturan"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             />
